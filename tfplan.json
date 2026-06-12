@@ -1,0 +1,18 @@
+{
+  "resource_changes": [
+    {
+      "address": "aws_instance.bad_modify",
+      "change": {
+        "actions": ["update"],
+        "before": {
+          "tags": {"GitCommitHash": "old111", "Environment": "staging"},
+          "instance_type": "t3.micro"
+        },
+        "after": {
+          "tags": {"GitCommitHash": "new222", "Environment": "production"},
+          "instance_type": "t3.large"
+        }
+      }
+    }
+  ]
+}

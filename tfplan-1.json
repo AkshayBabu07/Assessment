@@ -1,0 +1,36 @@
+{
+  "resource_changes": [
+    {
+      "address": "aws_instance.new_box",
+      "change": {
+        "actions": ["create"],
+        "before": null,
+        "after": {
+          "tags": {"GitCommitHash": "abc123", "Name": "new-box"}
+        }
+      }
+    },
+    {
+      "address": "aws_instance.existing_box",
+      "change": {
+        "actions": ["update"],
+        "before": {
+          "tags": {"GitCommitHash": "old111", "Name": "existing-box"},
+          "instance_type": "t3.micro"
+        },
+        "after": {
+          "tags": {"GitCommitHash": "new222", "Name": "existing-box"},
+          "instance_type": "t3.micro"
+        }
+      }
+    },
+    {
+      "address": "aws_s3_bucket.unchanged",
+      "change": {
+        "actions": ["no-op"],
+        "before": {"tags": {"GitCommitHash": "abc"}},
+        "after": {"tags": {"GitCommitHash": "abc"}}
+      }
+    }
+  ]
+}
