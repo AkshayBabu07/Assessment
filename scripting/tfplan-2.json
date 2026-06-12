@@ -1,0 +1,20 @@
+{
+  "resource_changes": [
+    {
+      "address": "aws_instance.to_delete",
+      "change": {
+        "actions": ["delete"],
+        "before": {"tags": {"GitCommitHash": "abc123"}},
+        "after": null
+      }
+    },
+    {
+      "address": "aws_instance.replace_me",
+      "change": {
+        "actions": ["create", "delete"],
+        "before": {"instance_type": "t2.micro"},
+        "after": {"instance_type": "t3.large"}
+      }
+    }
+  ]
+}
