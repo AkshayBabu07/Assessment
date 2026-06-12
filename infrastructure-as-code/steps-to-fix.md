@@ -66,3 +66,10 @@ This destroys only the 2nd resource; the rest remain untouched.
 terraform apply
 
 Expected output: **"No changes. Your infrastructure matches the configuration."**
+
+Commands Used:
+terraform state list
+terraform state mv 
+for_each meta-argument
+terraform state rm
+terraform plan / terraform apply
