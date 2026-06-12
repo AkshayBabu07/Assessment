@@ -4,13 +4,13 @@
 terraform state list | grep aws_instance.example
 ```
 Expected output:
-
+```bash
 aws_instance.example[0]
 aws_instance.example[1]
 aws_instance.example[2]
 aws_instance.example[3]
 aws_instance.example[4]
-
+```
 2. Update the configuration: convert `count` to `for_each`
 
 locals {
